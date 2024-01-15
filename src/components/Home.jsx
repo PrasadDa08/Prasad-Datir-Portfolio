@@ -1,10 +1,12 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import Carousal from "./Carousal";
+import Background from "./Background";
 
 function Home() {
   return (
     <div className="home-page">
+      <Background />
       <div className="intro">
         <h1>Prasad N. Datir</h1>
         {

@@ -1,11 +1,12 @@
 #root {
-  max-width: 1280px;
+  max-width: 1720px;
   margin: 0 auto;
   padding: 0;
-  height: 100vh;
-  /* border-left: 0.4vw solid black;
-  border-right: 0.4vw solid black; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background-color: #fffbe7;
+  box-sizing: border-box;
 }
 body {
   padding: 0;
@@ -22,7 +23,6 @@ body {
 }
 
 .nav-items h1 {
-  margin: auto 0;
   font-size: 22px;
   filter: drop-shadow(0.2vw 0.2vw 0vw white);
 }
@@ -31,6 +31,14 @@ body {
   display: flex;
   gap: 2vw;
   margin: 1.2vw 0;
+}
+
+.menu-icon {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
 }
 
 .nav-links a {
@@ -50,16 +58,22 @@ body {
 
 .home-page {
   display: flex;
-  justify-content: space-between;
+  margin: auto;
 }
 
 .intro {
   padding: 5%;
   width: 50%;
 }
+
+.intro h1 {
+  margin: 0;
+  font-size: 45px;
+  filter: drop-shadow(4px 4px 0px rgb(0, 247, 255));
+}
 .intro p {
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 25px;
+  font-weight: 300;
   text-align: justify;
   line-height: 30px;
   word-spacing: 10px;
@@ -67,25 +81,38 @@ body {
 }
 
 .Typewriter span {
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 600;
+  filter: drop-shadow(3px 3px 0px red);
 }
 
 .profile {
-  width: 50%;
+  width: 45%;
   padding: 5%;
+  display: flex;
+  place-items: center;
 }
 
+.profile .carousel-img {
+  width: 100% !important;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.profile p {
+  display: none;
+}
+
+.profile .carousel-root .carousel .thumbs-wrapper {
+  display: none;
+}
 .footer {
   display: flex;
   justify-content: space-between;
   padding: 0.3vw 2vw;
   background-color: #40dfef;
-  position: fixed;
-  bottom: 0;
-  width: 1280px;
+  width: 100%;
   box-sizing: border-box;
-  margin: auto;
 }
 
 .footer .link-buttons {
@@ -97,9 +124,33 @@ body {
   height: 84%;
 }
 
-@media only screen and (max-width: 800px) {
-  .nav-links {
+@media only screen and (max-width: 1000px) {
+  .mobile-menu {
     display: flex;
     flex-direction: column;
+    padding-top: 3vw;
+  }
+
+  .mobile-menu a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    width: fit-content;
+    color: black;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+    width: 34px;
+  }
+
+  .cross-icon {
+    width: 20px;
+    height: 20px;
+    padding: 2vw;
   }
 }
