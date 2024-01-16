@@ -2,6 +2,7 @@ import React from "react";
 import Typewriter from "typewriter-effect";
 import Carousal from "./Carousal";
 import Background from "./Background";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -25,6 +26,9 @@ function Home() {
           challenges that come with building robust and scalable web
           applications.
         </p>
+        <Link to="/about" className="next-button">
+          <button>Next Page</button>
+        </Link>
       </div>
       <div className="profile">
         <Carousal />

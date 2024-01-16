@@ -5,7 +5,7 @@ function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
   return (
     <nav className="nav-items">
-      <h1>Prasad.</h1>
+      <h1>PD.</h1>
 
       <div className={mobileMenu ? "mobile-menu" : "nav-links"}>
         <NavLink exact to="/" activeClassName="active-link">
