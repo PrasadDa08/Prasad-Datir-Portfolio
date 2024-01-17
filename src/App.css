@@ -5,8 +5,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: #ededed;
-  color: #697184;
+  background-color: #000000;
+  color: white;
   box-sizing: border-box;
 }
 body {
@@ -19,20 +19,29 @@ body {
   justify-content: space-between;
   padding: 0.3vw 2vw;
   align-content: center;
-  background-color: #ffffff;
-  border-bottom: 0.2vw solid #699e3c;
-  border-top: 0.2vw solid #699e3c;
+  background-color: transparent;
+  filter: drop-shadow(2px 2px 2px red);
   width: 100%;
   box-sizing: border-box;
   position: fixed;
   z-index: 99;
 }
 
+.nav-clipart {
+  width: 60%;
+  height: 100vh;
+  background-color: #fff;
+  clip-path: polygon(0 0, 61% 0, 100% 100%, 0 100%);
+  position: absolute;
+  z-index: 2;
+}
+
 .nav-items h1 {
   font-size: 22px;
   font-weight: 400;
-  color: #699e3c;
-  filter: drop-shadow(0.2vw 0.2vw 0vw rgb(255, 225, 0));
+  color: lightblue;
+  filter: drop-shadow(0.2vw 0.2vw 0vw rgb(255, 0, 0));
+  margin: auto 0;
 }
 
 .nav-links {
@@ -54,20 +63,25 @@ body {
   font-size: 18px;
   font-weight: 300;
   width: fit-content;
-  color: #699e3c;
+  color: lightblue;
   padding: 0;
 }
 
 .nav-links a.active {
-  color: red;
-  border-bottom: 0.2vw solid red; /* Change this to the desired color */
+  color: white;
+  border-bottom: 0.2vw solid white;
+  filter: drop-shadow(
+    2px 2px 2px rgb(255, 123, 23)
+  ); /* Change this to the desired color */
   /* Add any other styles you want for the active link */
 }
 
 .home-page {
   display: flex;
-  margin: auto auto;
+  margin: auto;
+  justify-content: space-between;
   position: relative;
+  /* box-shadow: 0 0.1vw 10vw red; */
 }
 
 .intro {
@@ -77,43 +91,46 @@ body {
   width: 50%;
   justify-content: center;
   box-sizing: border-box;
+  z-index: 2;
 }
 
 .intro h1 {
   margin: 0;
-  font-size: 45px;
-  color: black;
-  font-weight: 500;
-  filter: drop-shadow(3px 3px 0px #53ba17);
+  font-size: 38px;
+  color: darkblue;
+  font-weight: 400;
+  filter: drop-shadow(3px 2px 2px red);
 }
 .intro p {
-  font-size: 25px;
+  font-size: 18px;
   font-weight: 300;
-  text-align: justify;
-  line-height: 30px;
-  word-spacing: 10px;
-  padding: 2vw 0;
-  margin: 0;
+  text-align: left;
+  word-spacing: 5px;
+  margin: 1vw auto;
+  color: black;
 }
 
 .Typewriter span {
-  font-size: 35px;
-  font-weight: 400;
-  color: rgb(40, 41, 42);
-  filter: drop-shadow(2px 2px 0px red);
+  font-size: 28px;
+  font-weight: 300;
+  color: darkblue;
+  filter: drop-shadow(3px 2px 2px red);
 }
 
 .profile {
-  width: 45%;
-  padding: 5%;
+  width: 35%;
+  padding: 0;
   display: flex;
   place-items: center;
+  z-index: 2;
+  margin: auto;
 }
 
 .profile .carousel-img {
   width: 100% !important;
   border-radius: 10px;
   margin: auto;
+  z-index: 2;
 }
 
 .profile p {
@@ -143,10 +160,8 @@ body {
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 0.3vw 2vw;
-  background-color: #fff;
-  border-top: 0.2vw solid #699e3c;
-  border-bottom: 0.2vw solid #699e3c;
+  padding: 0.5vw 0vw;
+  background-color: transparent;
   width: 100%;
   box-sizing: border-box;
   position: fixed;
@@ -156,7 +171,29 @@ body {
 
 .footer .link-buttons {
   display: flex;
-  gap: 2vw;
+  gap: 3vw;
+  color: #000;
+  margin-left: 2vw;
+}
+
+.footer .link-buttons img {
+  width: 2.6vw;
+  height: 2.6vw;
+}
+
+.footer p {
+  color: #000;
+}
+
+.download-btn {
+  border: none;
+  border-radius: 1vw;
+  background-color: #fff;
+  font-size: 1vw;
+  font-weight: 600;
+  padding: 0.8vw;
+  margin-right: 2vw;
+  color: black;
 }
 
 .container {
@@ -167,6 +204,8 @@ body {
   .nav-items {
     display: flex;
     justify-content: space-between;
+    background-color: #000;
+    filter: none;
   }
 
   .mobile-menu {
@@ -180,9 +219,10 @@ body {
     font-size: 20px;
     font-weight: 300;
     width: fit-content;
-    color: #699e3c;
+    color: lightblue;
     padding: 1vw;
     margin: auto;
+    filter: drop-shadow(2px 2px 2px red);
   }
 
   .mobile-menu a.active {
@@ -200,23 +240,51 @@ body {
     display: none;
   }
 
+  .nav-clipart {
+    display: none;
+  }
+
+  .mobile-clipart {
+    clip-path: polygon(
+      30% 0%,
+      25% 54%,
+      77% 66%,
+      100% 54%,
+      100% 100%,
+      0 100%,
+      0% 70%,
+      0 0
+    );
+    background-color: #fff;
+    width: 100%;
+    height: 80vw;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 0;
+  }
+
   .menu-icon {
     display: block;
     width: 4vw;
+    height: 4vw;
+    background-color: #fff;
+    margin: auto 2vw;
   }
 
   .cross-icon {
-    width: 20px;
-    height: 20px;
-    padding: 2vw;
+    width: 3vw;
+    height: 3vw;
+    padding: 0.5vw;
+    margin: 1vw 2vw;
+    background-color: #fff;
   }
 
   .home-page {
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    margin: auto;
-    position: relative;
+    margin: 6vw auto;
   }
 
   .intro {
@@ -231,6 +299,7 @@ body {
     font-weight: 500;
     filter: drop-shadow(3px 3px 0px #53ba17);
     text-align: center;
+    z-index: 2;
   }
   .intro p {
     font-size: 18px;
@@ -239,10 +308,13 @@ body {
     line-height: 30px;
     word-spacing: 10px;
     padding: 4vw 0;
+    color: black;
+    z-index: 2;
   }
 
   .Typewriter {
     text-align: center;
+    z-index: 2;
   }
 
   .Typewriter span {
@@ -250,6 +322,7 @@ body {
     font-weight: 400;
     color: rgb(40, 41, 42);
     filter: drop-shadow(2px 2px 0px red);
+    z-index: 2;
   }
 
   .profile {

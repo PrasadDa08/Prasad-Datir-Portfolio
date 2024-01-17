@@ -2,10 +2,11 @@ function Footer() {
   return (
     <div className="footer">
       <div className="link-buttons">
-        <p>LinkedIn</p>
-        <p>Git hub</p>
+        <img src="src/assets/images/icons8-linkedin-50.png" />
+        <img src="src/assets/images/icons8-github-64.png" />
       </div>
-      <button>Download Resume</button>
+      <p>© 2024 Made by Prasad</p>
+      <button className="download-btn">Download Resume</button>
     </div>
   );
 }
