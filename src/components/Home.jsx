@@ -2,6 +2,7 @@ import Typewriter from "typewriter-effect";
 import Carousal from "./Carousal";
 
 import { Link } from "react-router-dom";
+import Cube from "./Cube";
 
 function Home() {
   return (
@@ -18,7 +19,7 @@ function Home() {
               }}
             />
           }
-          <div className="mobile-clipart"></div>
+
           <p>
             Hello there! 👋 I'm a passionate and results-driven full-stack web
             developer with a love for crafting high-quality digital experiences.
@@ -32,7 +33,8 @@ function Home() {
           </Link>
         </div>
         <div className="profile">
-          <Carousal />
+          {/* <Carousal /> */}
+          <Cube />
         </div>
       </div>
       {/* <div className="clip-art"></div> */}

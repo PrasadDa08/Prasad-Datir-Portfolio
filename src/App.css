@@ -1,10 +1,10 @@
 #root {
-  max-width: 1720px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 0;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+
   background-color: #000000;
   color: white;
   box-sizing: border-box;
@@ -157,10 +157,46 @@ body {
   background-color: #fff;
 }
 
+.container h1 {
+  color: #000;
+}
+
+.skill {
+  padding: 0vw;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+}
+
+.skill-1 {
+  width: 50%;
+  padding: 1vw 3vw;
+  box-sizing: border-box;
+}
+
+.skill-1 h2 {
+  color: #000;
+  margin: 0;
+}
+
+.skill-shell {
+  /* border: 0.1vw solid black; */
+  width: 80%;
+  border-radius: 2vw;
+  background-color: #b2b2b2;
+}
+
+.skill-shell .skill-fill {
+  width: 50%;
+  height: 1.5vw;
+  background-color: darkblue;
+  border-radius: 2vw;
+}
+
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 0.5vw 0vw;
+  padding: 1vw;
   background-color: transparent;
   width: 100%;
   box-sizing: border-box;
@@ -182,7 +218,9 @@ body {
 }
 
 .footer p {
-  color: #000;
+  color: #a7a4a4;
+  font-size: 20px;
+  margin: 0;
 }
 
 .download-btn {
@@ -197,7 +235,11 @@ body {
 }
 
 .container {
-  height: 84%;
+  height: 100%;
+  z-index: 3;
+  width: 100%;
+  box-sizing: border-box;
+  margin: auto;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -212,6 +254,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 3vw 0 2vw 0;
+    filter: drop-shadow(2px 2px 2px red);
   }
 
   .mobile-menu a {
@@ -222,18 +265,21 @@ body {
     color: lightblue;
     padding: 1vw;
     margin: auto;
-    filter: drop-shadow(2px 2px 2px red);
+    z-index: 3;
   }
 
   .mobile-menu a.active {
-    color: red;
-    border-bottom: 0.2vw solid red; /* Change this to the desired color */
-    /* Add any other styles you want for the active link */
+    color: rgb(255, 255, 255);
+    border-bottom: 0.2vw solid white;
+    filter: drop-shadow(2px 2px 2px rgb(255, 123, 23));
   }
 
   .nav-items h1 {
     margin: auto 2vw;
     font-size: 4vw;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(0.3vw 0.3vw 0.3vw rgb(252, 80, 80));
   }
 
   .nav-links {
@@ -242,26 +288,6 @@ body {
 
   .nav-clipart {
     display: none;
-  }
-
-  .mobile-clipart {
-    clip-path: polygon(
-      30% 0%,
-      25% 54%,
-      77% 66%,
-      100% 54%,
-      100% 100%,
-      0 100%,
-      0% 70%,
-      0 0
-    );
-    background-color: #fff;
-    width: 100%;
-    height: 80vw;
-    left: 0;
-    bottom: 0;
-    position: absolute;
-    z-index: 0;
   }
 
   .menu-icon {
@@ -288,8 +314,12 @@ body {
   }
 
   .intro {
-    padding: 5%;
-    width: 80%;
+    padding: 20% 5% 5% 5%;
+    width: 100%;
+    margin-top: -15%;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+    height: fit-content;
+    background-color: #fff;
   }
 
   .intro h1 {
@@ -336,5 +366,38 @@ body {
     width: 100% !important;
     border-radius: 20px;
     margin: auto;
+  }
+
+  .footer {
+    background-color: #fff;
+    padding: 2vw 2vw;
+  }
+
+  .footer .link-buttons {
+    display: flex;
+    gap: 3vw;
+    margin-left: 2vw;
+  }
+
+  .footer .link-buttons img {
+    width: 2.6vw;
+    height: 2.6vw;
+    margin: auto;
+  }
+
+  .footer p {
+    color: #999999;
+    margin: 0;
+  }
+
+  .download-btn {
+    border: none;
+    border-radius: 1vw;
+    background-color: #000;
+    font-size: 1.2vw;
+    font-weight: 600;
+    padding: 1vw;
+    margin-right: 2vw;
+    color: rgb(255, 253, 253);
   }
 }
