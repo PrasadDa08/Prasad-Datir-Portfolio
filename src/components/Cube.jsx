@@ -11,7 +11,7 @@ import "./cube.scss";
 const Cube = () => {
   return (
     <>
-      <div className="stage-cube-cont">
+      <div className="stage-cube-cont mobile-cube">
         <div className="cubespinner">
           <div className="face1">
             <FontAwesomeIcon icon={faPython} color="#0096FF" />

@@ -72,3 +72,59 @@
     transform: rotateX(90deg) rotateY(90deg);
   }
 }
+
+@media only screen and (max-width: 1000px) {
+  .cubespinner {
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 9s;
+    transform-style: preserve-3d;
+    transform-origin: 11vw 11vw 0;
+    margin: 13% 40%;
+    div {
+      position: absolute;
+      width: 18vw;
+      height: 18vw;
+      border: 1px solid #ff0000;
+      background-color: rgba(3, 69, 76, 0.4);
+      text-align: center;
+      font-size: 10vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .face1 {
+      transform: translateZ(9vw);
+      color: #dd0031;
+    }
+    .face2 {
+      transform: rotateY(90deg) translateZ(9vw);
+      color: #f06529;
+    }
+    .face3 {
+      transform: rotateY(90deg) rotateX(90deg) translateZ(9vw);
+      color: #28a4d9;
+    }
+    .face4 {
+      transform: rotateY(180deg) rotateZ(90deg) translateZ(9vw);
+      color: #5ed4f4;
+    }
+    .face5 {
+      transform: rotateY(-90deg) rotateZ(90deg) translateZ(9vw);
+      color: #efd81d;
+    }
+    .face6 {
+      transform: rotateX(-90deg) translateZ(9vw);
+      color: #ec4d28;
+    }
+  }
+
+  .stage-cube-cont {
+    width: 100%;
+    top: 0;
+    position: absolute;
+    right: 0;
+    box-sizing: border-box;
+  }
+}
