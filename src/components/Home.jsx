@@ -33,11 +33,9 @@ function Home() {
           </Link>
         </div>
         <div className="profile">
-          {/* <Carousal /> */}
           <Cube />
         </div>
       </div>
-      {/* <div className="clip-art"></div> */}
     </>
   );
 }

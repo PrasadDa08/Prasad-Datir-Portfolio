@@ -38,14 +38,8 @@ function About() {
       <div className="tools">
         <FontAwesomeIcon icon={faBootstrap} color="#000" />
         <FontAwesomeIcon icon={faGitAlt} color="#000" />
-        <img
-          src="src/assets/images/icons/vs-icon.png"
-          style={{ width: "3vw" }}
-        />
-        <img
-          src="src/assets/images/icons/netlify-dark.png"
-          style={{ width: "3vw" }}
-        />
+        <img src="src/assets/images/icons/vs-icon.png" />
+        <img src="src/assets/images/icons/netlify-dark.png" />
       </div>
     </div>
   );

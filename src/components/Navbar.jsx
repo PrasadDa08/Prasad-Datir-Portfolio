@@ -6,15 +6,15 @@ function Navbar() {
   return (
     <>
       <div className="nav-clipart"></div>
-      <nav className="nav-items">
+      <nav className={mobileMenu ? "mobile-items" : "nav-items"}>
         <h1>PD.</h1>
 
         <div className={mobileMenu ? "mobile-menu" : "nav-links"}>
           <NavLink exact to="/" activeClassName="active-link">
             Home
           </NavLink>
-          <NavLink to="/about" activeClassName="active-link">
-            About
+          <NavLink to="/skills" activeClassName="active-link">
+            Skills
           </NavLink>
           <NavLink to="/projects" activeClassName="active-link">
             Projects
