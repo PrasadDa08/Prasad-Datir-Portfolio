@@ -34,6 +34,7 @@ function Home() {
         </div>
         <div className="profile">
           <Cube />
+          <img src="src/assets/images/OIG.jpeg" />
         </div>
       </div>
     </>

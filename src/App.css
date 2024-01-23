@@ -137,6 +137,10 @@ body {
   display: none;
 }
 
+.profile img {
+  display: none;
+}
+
 .profile .carousel-root .carousel .thumbs-wrapper {
   display: none;
 }
@@ -257,6 +261,57 @@ body {
   aspect-ratio: 1;
   padding: 1vw;
   box-sizing: border-box;
+}
+
+.projects {
+  z-index: 3;
+  box-sizing: border-box;
+  width: 90%;
+  margin: auto;
+}
+
+.card-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: auto;
+  gap: 4vw;
+  width: 100%;
+}
+
+.card-overview {
+  text-align: center;
+  background-color: lightgrey;
+  padding: 2vw;
+  width: 100%;
+  box-sizing: border-box;
+  clip-path: inset(0 0 0 0 round 5% 20% 0 10%);
+}
+
+.card-overview img {
+  width: 100%;
+  margin: auto;
+  aspect-ratio: 4/3;
+  clip-path: inset(0 0 0 0 round 5% 20% 0 10%);
+}
+
+.project-card img {
+  width: 100%;
+  margin: auto;
+  aspect-ratio: 4/3;
+  clip-path: inset(0 0 0 0 round 5% 20% 0 10%);
+}
+
+.card-overview p {
+  margin: -16% auto auto auto;
+  width: 100%;
+  position: relative;
+  background-color: #000;
+  border-bottom-left-radius: 2vw;
+  color: #fff;
+  font-size: 1vw;
+  padding: 1vw;
+  box-sizing: border-box;
+  opacity: 0.5;
 }
 
 .footer {
@@ -427,9 +482,15 @@ body {
   .profile {
     width: 100%;
     position: relative;
-    height: fit-content;
-    padding: 20%;
+    padding: 5%;
     box-sizing: border-box;
+  }
+
+  .profile img {
+    display: block;
+    width: 100%;
+    margin: auto;
+    aspect-ratio: 5/3;
   }
 
   .skill-container {
