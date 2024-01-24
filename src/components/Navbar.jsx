@@ -10,16 +10,16 @@ function Navbar() {
         <h1>PD.</h1>
 
         <div className={mobileMenu ? "mobile-menu" : "nav-links"}>
-          <NavLink exact to="/" activeClassName="active-link">
+          <NavLink to="/" activeclassname="active-link">
             Home
           </NavLink>
-          <NavLink to="/skills" activeClassName="active-link">
+          <NavLink to="/skills" activeclassname="active-link">
             Skills
           </NavLink>
-          <NavLink to="/projects" activeClassName="active-link">
+          <NavLink to="/projects" activeclassname="active-link">
             Projects
           </NavLink>
-          <NavLink to="/contact" activeClassName="active-link">
+          <NavLink to="/contact" activeclassname="active-link">
             Contact
           </NavLink>
         </div>
