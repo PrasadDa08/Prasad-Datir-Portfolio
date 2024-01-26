@@ -4,22 +4,23 @@ import Carousal from "./Carousal";
 function ProjectList() {
   const projects = [
     {
-      name: "natours",
+      name: "naTours",
       img: "src/assets/images/natours-1.png",
-      git: "",
-      demo: "",
-      description: "Natours project description.",
+      git: "https://github.com/PrasadDa08/naTours_web",
+      demo: "https://natours-web-e50y.onrender.com/",
+      description:
+        "This is a Tour Booking website. Users can book different tours, Check the locations, submit reviews and meny more. Admin and Lead tour guides can create new tours and manage all tours.  ",
     },
     {
       name: "project2",
-      img: "src/assets/images/project2.png",
+      img: "src/assets/images/natours-1.png",
       git: "",
       demo: "",
       description: "Project 2 description.",
     },
     {
       name: "project3",
-      img: "src/assets/images/project3.png",
+      img: "src/assets/images/natours-1.png",
       git: "",
       demo: "",
       description: "Project 3 description.",
@@ -54,16 +55,15 @@ function ProjectList() {
       </div>
 
       {selectedProject && (
-        <div className="overlay" onClick={closeOverlay}>
-          <div className="overlay-content">
+        <div className="overlay">
+          <div className="overlay-content" onClick={closeOverlay}>
             <Carousal img={selectedProject.img} />
             <h2>{selectedProject.name}</h2>
-            <p>Desp</p>
-            <div className="project-buttons">
-              <button>Github</button>
-              <button>Live Demo</button>
-            </div>
-            {/* <button onClick={closeOverlay}>Close</button> */}
+            <p>{selectedProject.description}</p>
+          </div>
+          <div className="project-buttons">
+            <button>Github</button>
+            <button>Live Demo</button>
           </div>
         </div>
       )}

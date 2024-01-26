@@ -7,6 +7,7 @@ import Cube from "./Cube";
 function Home() {
   return (
     <>
+      <div className="clipart"></div>
       <div className="home-page">
         <div className="intro">
           <h1>Prasad N. Datir</h1>

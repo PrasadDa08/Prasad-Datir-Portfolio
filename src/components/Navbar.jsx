@@ -5,7 +5,7 @@ function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
   return (
     <>
-      <div className="nav-clipart"></div>
+      {/* <div className="nav-clipart"></div> */}
       <nav className={mobileMenu ? "mobile-items" : "nav-items"}>
         <h1>PD.</h1>
 
