@@ -291,8 +291,13 @@ body {
 }
 
 .projects h6 {
-  font-size: 1.2vw;
-  padding: 0 0 2vw 10vw;
+  font-size: 1.5vw;
+  padding: 1.5vw 0;
+  margin: auto;
+  font-weight: 300;
+  text-align: justify;
+  width: 80%;
+  box-sizing: border-box;
 }
 
 .project-list {
@@ -361,9 +366,10 @@ body {
 .card-overview {
   text-align: center;
   width: 100%;
+  margin: auto;
   box-sizing: border-box;
   background-color: rgba(3, 69, 76, 0.4);
-  border: 0.1vw solid red;
+  border: 0.1vw solid rgb(0, 0, 0);
 }
 
 .card-overview img {
