@@ -5,7 +5,11 @@ function Contact() {
     <form
       action="https://formspree.io/f/mwkgvddz"
       method="POST"
-      style={{ margin: "auto" }}
+      style={{
+        margin: "auto",
+        background: "#fff",
+        clipPath: "polygon(0 0%, 100% 10%, 100% 100%, 0 90%)",
+      }}
     >
       <label>
         Name:

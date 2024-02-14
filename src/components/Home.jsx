@@ -7,7 +7,7 @@ import Cube from "./Cube";
 function Home() {
   return (
     <>
-      <div className="clipart"></div>
+      {/* <div className="clipart"></div> */}
       <div className="home-page">
         <div className="intro">
           <h1>Prasad N. Datir</h1>
@@ -29,9 +29,9 @@ function Home() {
             applications.
           </p>
 
-          <Link to="/about" className="next-button">
+          {/* <Link to="/about" className="next-button">
             <button>Next Page</button>
-          </Link>
+          </Link> */}
         </div>
         <div className="profile">
           <Cube />

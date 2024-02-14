@@ -2,7 +2,7 @@ import ProjectList from "./ProjectList";
 function Projects() {
   return (
     <>
-      <div className="project-clipart"></div>
+      {/* <div className="project-clipart"></div> */}
       <div className="projects">
         <h1>My Projects</h1>
         <h6>
