@@ -3,9 +3,10 @@
   margin: 0 auto;
   padding: 0;
   min-height: 100vh;
+  justify-content: center;
   display: flex;
   flex-direction: column;
-  background-color: #676666;
+  background-color: #d6d5d5;
   color: white;
   box-sizing: border-box;
 }
@@ -16,15 +17,15 @@ body {
 
 .nav-items {
   display: flex;
-  justify-content: space-between;
-  padding: 0.3vw 2vw;
-  align-content: center;
-  background-color: transparent;
-  filter: drop-shadow(2px 2px 2px red);
   width: 100%;
+  justify-content: center;
+  padding: 0.3vw 2vw;
+  background: rgba(0, 0, 0, 0);
   box-sizing: border-box;
   position: fixed;
   z-index: 9;
+  background: #000;
+  margin: auto;
 }
 
 /* .clipart {
@@ -38,9 +39,9 @@ body {
 
 .nav-items h1 {
   font-size: 22px;
-  font-weight: 400;
-  color: lightblue;
-  filter: drop-shadow(0.2vw 0.2vw 0vw rgb(255, 0, 0));
+  font-weight: 1000;
+  color: rgb(241, 240, 241);
+  filter: drop-shadow(0.2vw 0.2vw 0vw rgba(255, 0, 0, 0.422));
   margin: auto 0;
 }
 
@@ -48,6 +49,7 @@ body {
   display: flex;
   gap: 2vw;
   margin: 1.2vw 0;
+  list-style: none;
 }
 
 .menu-icon {
@@ -60,31 +62,27 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 500;
   width: fit-content;
   color: lightblue;
   padding: 0;
 }
 
-.nav-links a.active {
+.nav-links .active {
   color: white;
   border-bottom: 0.2vw solid white;
-  filter: drop-shadow(
-    2px 2px 2px rgb(255, 123, 23)
-  ); /* Change this to the desired color */
-  /* Add any other styles you want for the active link */
 }
 
 .home-page {
   display: flex;
   margin: auto;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: space-between;
   position: relative;
   box-sizing: border-box;
-  background-color: #eceaea;
-  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  /* background-color: #676767; */
+  /* clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); */
 }
 
 .intro {
@@ -168,20 +166,21 @@ body {
 }
 
 .skill-container {
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
-  background: #eceaea;
-  padding: 10%;
+  clip-path: polygon(0 0, 100% 10%, 100% 90%, 0% 100%);
+  background: #3a3a3a;
+  margin: auto;
+  padding: 5%;
 }
 
 .skill-container h1 {
   color: #000;
-  padding: 3vw;
   font-size: 30px;
   font-weight: 500;
   text-align: center;
@@ -277,14 +276,14 @@ body {
 
 .projects {
   z-index: 3;
-  padding: 10% 0;
+  padding: 10vh 5vw;
   box-sizing: border-box;
   width: 100%;
   height: 100vh;
   margin: auto;
   color: #000;
-  background-color: #fff;
-  clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 90%);
+  /* background-color: #fff; */
+  /* clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 90%); */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -300,7 +299,6 @@ body {
 
 .projects h6 {
   font-size: 1.5vw;
-  padding: 1.5vw 0;
   font-weight: 300;
   text-align: justify;
   width: 80%;

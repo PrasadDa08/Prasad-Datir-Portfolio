@@ -8,7 +8,7 @@ function Home() {
   return (
     <>
       {/* <div className="clipart"></div> */}
-      <div className="home-page">
+      <section className="home-page" id="home">
         <div className="intro">
           <h1>Prasad N. Datir</h1>
           {
@@ -37,7 +37,7 @@ function Home() {
           <Cube />
           <img src="src/assets/images/OIG.jpeg" />
         </div>
-      </div>
+      </section>
     </>
   );
 }

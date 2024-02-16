@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function About() {
   return (
-    <div className="skill-container">
+    <section className="skill-container" id="about">
       <h1>My-Skills</h1>
       <div className="skill">
         <div className="skill-1">
@@ -41,7 +41,7 @@ function About() {
         <img src="src/assets/images/icons/vs-icon.png" />
         <img src="src/assets/images/icons/netlify-dark.png" />
       </div>
-    </div>
+    </section>
   );
 }
 

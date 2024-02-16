@@ -1,27 +1,70 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function Navbar() {
   const [mobileMenu, setMobileMenu] = useState(false);
+  const [activeLink, setActiveLink] = useState("home");
+  console.log(activeLink);
+
+  useEffect(() => {
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveLink(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    ); // Adjust threshold as needed
+
+    // Observe all sections
+    document.querySelectorAll("section").forEach((section) => {
+      sectionObserver.observe(section);
+    });
+
+    return () => {
+      // Cleanup observer
+      sectionObserver.disconnect();
+    };
+  }, [activeLink]);
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    console.log(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleLinkClick = (sectionId, event) => {
+    event.preventDefault(); // Prevent default anchor behavior
+    scrollToSection(sectionId);
+  };
+
   return (
     <>
-      {/* <div className="nav-clipart"></div> */}
       <nav className={mobileMenu ? "mobile-items" : "nav-items"}>
-        <h1>PD.</h1>
-
         <div className={mobileMenu ? "mobile-menu" : "nav-links"}>
-          <NavLink to="/" activeclassname="active-link">
-            Home
-          </NavLink>
-          <NavLink to="/skills" activeclassname="active-link">
-            Skills
-          </NavLink>
-          <NavLink to="/projects" activeclassname="active-link">
-            Projects
-          </NavLink>
-          <NavLink to="/contact" activeclassname="active-link">
-            Contact
-          </NavLink>
+          <li className={activeLink === "home" ? "active" : ""}>
+            <a href="#" onClick={(event) => handleLinkClick("home", event)}>
+              Home
+            </a>
+          </li>
+          <li className={activeLink === "about" ? "active" : ""}>
+            <a href="#" onClick={(event) => handleLinkClick("about", event)}>
+              About
+            </a>
+          </li>
+          <li className={activeLink === "projects" ? "active" : ""}>
+            <a href="#" onClick={(event) => handleLinkClick("projects", event)}>
+              Projects
+            </a>
+          </li>
+          <li className={activeLink === "contact" ? "active" : ""}>
+            <a href="#" onClick={(event) => handleLinkClick("contact", event)}>
+              Contact
+            </a>
+          </li>
         </div>
         <img
           src={

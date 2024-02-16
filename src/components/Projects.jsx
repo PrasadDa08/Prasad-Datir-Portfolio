@@ -3,7 +3,7 @@ function Projects() {
   return (
     <>
       {/* <div className="project-clipart"></div> */}
-      <div className="projects">
+      <section className="projects" id="projects">
         <h1>My Projects</h1>
         <h6>
           Browse through a selection of major projects I've developed below. For
@@ -14,7 +14,7 @@ function Projects() {
           each project to get a comprehensive view of my work.
         </h6>
         <ProjectList />
-      </div>
+      </section>
     </>
   );
 }
